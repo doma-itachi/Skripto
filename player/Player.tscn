@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://ctsllk832t121"]
+
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_4xqut"]
+[ext_resource type="Script" path="res://scripts/message_window.gd" id="1_okvmh"]
+[ext_resource type="Script" path="res://scripts/background_manager.gd" id="1_tcklr"]
+[ext_resource type="Script" path="res://scripts/character_manager.gd" id="3_7yxih"]
+[ext_resource type="Script" path="res://scripts/music_manager.gd" id="3_tpqmh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4xqut")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+script = ExtResource("1_tcklr")
+
+[node name="BackgroundBuffer" type="TextureRect" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="CharacterContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_7yxih")
+
+[node name="MessageBox" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_okvmh")
+
+[node name="Name" type="Label" parent="MessageBox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Text" type="RichTextLabel" parent="MessageBox"]
+modulate = Color(0.227451, 0.227451, 0.227451, 1)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_tpqmh")

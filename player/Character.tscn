@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://q1c8ry4nqo24"]
+
+[ext_resource type="Script" path="res://scripts/character.gd" id="1_hqjbl"]
+
+[node name="Character" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqjbl")
+
+[node name="Sprite" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -720.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(640, 720)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SpriteBuffer" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -720.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(640, 720)
+expand_mode = 1
+stretch_mode = 5

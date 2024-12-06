@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        font-family: "Noto Sans JP", sans-serif;
+    }
+}
+
+@layer utilities{
+    .hidden-scrollbar {
+        scrollbar-width: none;
+    }
+    .hidden-scrollbar::-webkit-scrollbar{
+        display: none;
+    }
+}
